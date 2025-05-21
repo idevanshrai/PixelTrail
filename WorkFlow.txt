@@ -1,0 +1,26 @@
+[ User Uploads Image ]
+            │
+            ▼
+[ Check EXIF Data ]
+    ├── If GPS Found → [ Map Coordinates → Show Location ]
+    └── If Not Found
+            │
+            ▼
+[ Run OCR ]
+    └── Extract Text (e.g., “Marina Bay Sands”, “Delhi Metro”)
+            │
+            ▼
+[ Use CLIP ]
+    └── Get Embedding of Image → Compare with known locations
+            │
+            ▼
+[ Match Text/Visual Embeddings to Locations ]
+    └── Use OpenStreetMap (Nominatim) to get coordinates
+            │
+            ▼
+[ Confidence Scoring ]
+    └── Combine: OCR + CLIP + partial metadata
+            │
+            ▼
+[ Final Guess ]
+    └── Display on Leaflet Map + Reasoning Logs

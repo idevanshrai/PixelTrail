@@ -1,0 +1,36 @@
+PixelTrail/
+├── backend/                         # Flask API hosted on Render
+│   ├── app.py
+│   ├── ocr.py
+│   ├── exif_reader.py
+│   ├── clip_matcher.py
+│   ├── geo_resolver.py
+│   ├── utils/
+│   │   ├── image_utils.py
+│   │   └── scorer.py
+│   ├── test_images/
+│   ├── requirements.txt
+│   ├── render.yaml                  # Render deployment config
+│   └── .env                         # Render environment variables
+│
+├── frontend/                        # Hosted on Vercel
+│   ├── index.html                   # Upload + Result page
+│   ├── splash.html                  # Initial splash screen
+│   ├── css/
+│   │   └── styles.css
+│   ├── js/
+│   │   ├── app.js                   # Handles API calls, uploads
+│   │   ├── splash.js                # Splash screen animations
+│   ├── three/
+│   │   ├── scene.js                 # Three.js setup
+│   │   └── assets/                  # 3D models/textures
+│   └── assets/
+│       ├── logo.png
+│       ├── background.jpg
+│       └── icons/
+│           ├── upload.svg
+│           └── location.svg
+│
+├── models/
+│   └── reference_embeddings.pkl     # Optional for visual matching
+├── README.md
